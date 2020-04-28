@@ -1,0 +1,11 @@
+{
+  "type": "mssql",
+  "host": "AWSBR7PDCLIDB04.aws.mc1.br",
+  "database": "BO_WTM_PEPSICO",
+  "extra": {
+    "driver": "msnodesqlv8",
+    "options": {
+      "trustedConnection": true
+    }
+  }
+}
