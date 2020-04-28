@@ -5,19 +5,36 @@
   "repository": "git@github.com:onlyreynaldo/wtm-sustain-pepsico.git",
   "author": "Reynaldo Layme <layme.reynaldo@icloud.com>",
   "license": "MIT",
+  "scripts": {
+    "cm": "git-cz"
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
+    "cz-conventional-changelog": "3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
     "prettier": "^2.0.5",
     "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
